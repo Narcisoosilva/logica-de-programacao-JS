@@ -71,7 +71,7 @@ alert(dado)
 /*
   4.Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.
 */
-
+/*
 let idade = parseInt(prompt("Digite sua idade."));
 
 let dia = idade * 365;
@@ -79,12 +79,29 @@ let dia = idade * 365;
 let meses = dia /30;
 
 document.write("Sua idade é: em anos = " + idade +", em meses = " +meses +" em   dias = " + dia);
-
+*/
 
 
 /*
   5.Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.
   */
+
+  let eleitor = parseInt(prompt("Digite o número total de eleitores"));
+  let votos_brancos = parseInt(prompt("Digite o número total de votos_brancos"));
+  let votos_nulos = parseInt(prompt("Digite o número total de votos_nulos"));
+  let votos_validos = parseInt(prompt("Digite o número total de votos_validos"));
+
+    //calculando as %
+
+  let percentualBrancos = (votos_brancos/eleitor) *100;
+  let percentualNulos = (votos_nulos/eleitor) *100;
+  let percentualValidos = (votos_validos/eleitor) *100;
+
+  document.write("Percentual de votos brancos: " + percentualBrancos + "%<br>");
+  document.write("Percentual de votos nulos: " + percentualNulos + "%<br>");
+  document.write("Percentual de votos válidos: " + percentualValidos + "%");
+
+
 
   </script>
 </body>
