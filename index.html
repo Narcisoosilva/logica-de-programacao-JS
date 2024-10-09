@@ -61,9 +61,28 @@ document.write("A media dos aluns do 3º serie é?: "+ media);
 
 /*
   3.Escreva um algoritmo para ler um valor (do teclado) e escrever (na tela) o seu antecessor.
+*/
+/*
+let dado = parseInt(prompt("digite algo"));
+dado -= 1;
+alert(dado)
+*/
 
+/*
   4.Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.
+*/
 
+let idade = parseInt(prompt("Digite sua idade."));
+
+let dia = idade * 365;
+
+let meses = dia /30;
+
+document.write("Sua idade é: em anos = " + idade +", em meses = " +meses +" em   dias = " + dia);
+
+
+
+/*
   5.Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.
   */
 
