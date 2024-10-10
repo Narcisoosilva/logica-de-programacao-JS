@@ -134,7 +134,7 @@ let idade = parseInt(prompt("Digite sua idade."));
 
     Faça o calculo que peça os valores que ele recebeu durante o mês e subtraia pelos seus gastos. Se o valor for positivo escreva: " Parabéns! Vamos investir um pouco". Senão escreva: "Você esta ficando com a conta negativa. Precisa fazer cortes e investir em educação para virar o jogo".
     */
-
+    /*
     var agua = 40.00;
     var luz = 50.00;
     var internet =  80.00;
@@ -160,6 +160,46 @@ let idade = parseInt(prompt("Digite sua idade."));
       document.write("Seu saldo é: " + saldo +"  Você esta ficando com a conta negativa. Precisa fazer cortes e investir em educação para virar o jogo");
 
     }
+
+    /*
+    Nunca deixe de praticar. Segue mais 5 exercícios de fixação:
+
+    1. Faça um algoritmo que leia 2 números inteiros para as variáveis A e B. Caso A seja maior que B e B seja par, efetue a troca dos valores de forma que a variável A passe a conter o valor da variável B e, a variável B passe a conter o valor da variável.
+    */
+    //debugger
+    var a = parseInt(prompt("Digite o 1º número."))
+    var b = parseInt(prompt("Digite o 2º número."))
+
+    if((a > b) && (b% 2 === 0)){
+      var c = b;
+      b = a;
+      a = c;
+
+      document.write("o 1º Número era = " + b + ", e ficou = " + a + "<br>")
+      document.write("o 2º Número era = " + a + ", e ficou = " + b )
+    }else{
+      
+      document.write("o 1º Número ficou = " + a + "<br>")
+      document.write("o 2º Número ficou = " + b )
+    }
+
+    /*
+    2. Faça um algoritmo que leia dois valores numéricos inteiros e distintos. Apresente a diferença do maior pelo menor na tela.
+
+    3. Faça um algoritmo que leia dois valores numéricos e imprima o maior. Caso os números sejam iguais imprima a mensagem ‘Números iguais!’.
+
+    4. Faça um algoritmo que calcule e imprima o desconto do salário de um funcionário, sabendo que:
+
+    a. se salário < R$ 1000, 00, desconto de 5% sobre o salário;
+
+    b. se salário >= R$ 1000, 00 e <= R$2000,00, desconto de 10% sobre o salário;
+
+    c. se salário > R$ 2000, 00, desconto de 15% sobre o salário
+
+    5. Faça um algoritmo que efetue a leitura de três valores numéricos reais distintos e apresente os valores lidos em ordem crescente.
+
+
+    */
      
 
 
