@@ -203,7 +203,7 @@ let idade = parseInt(prompt("Digite sua idade."));
     /*
     3. Faça um algoritmo que leia dois valores numéricos e imprima o maior. Caso os números sejam iguais imprima a mensagem ‘Números iguais!’.
 
-    */
+    
     var a = parseInt(prompt("Digite o 1º número."))
     var b = parseInt(prompt("Digite o 2º número."))
 
@@ -215,7 +215,7 @@ let idade = parseInt(prompt("Digite sua idade."));
     }else if(b > a){
       document.write("o 2º Número é maior que 1º: " + b)
     }
-   
+   */
    
     /*
 
@@ -226,6 +226,30 @@ let idade = parseInt(prompt("Digite sua idade."));
     b. se salário >= R$ 1000, 00 e <= R$2000,00, desconto de 10% sobre o salário;
 
     c. se salário > R$ 2000, 00, desconto de 15% sobre o salário
+
+    */
+    var salario = parseInt(prompt("Digite o seu salário."))
+    
+    if(salario < 1000){
+      //desconto de 5% sobre o salário;
+      var desc = 5;
+      var saldo = salario - (salario * desc)/100;
+      document.write(" O salário bruto é de: " + salario + " o desconto é de: " + desc + "%, O salário líquido é de " + saldo);
+      
+    }else if(salario >= 1000){
+      //desconto de 10% sobre o salário;
+      var desc = 10;
+      var saldo = salario - (salario * desc)/100;
+      document.write(" O salário bruto é de: " + salario + " o desconto é de: " + desc + "%, O salário líquido é de " + saldo);
+    }else if(salario > 2000){
+      //desconto de 15% sobre o salário
+      var desc = 15;
+      var saldo = salario - (salario * desc)/100;
+      document.write(" O salário bruto é de: " + salario + " o desconto é de: " + desc + "%, O salário líquido é de " + saldo);
+    }
+   
+   
+    /*
 
     5. Faça um algoritmo que efetue a leitura de três valores numéricos reais distintos e apresente os valores lidos em ordem crescente.
 
