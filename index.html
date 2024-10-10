@@ -152,8 +152,10 @@ let idade = parseInt(prompt("Digite sua idade."));
 
     var investimento = (saldo * 30)/100;
 
+    var diversao = saldo - investimento;
+
     if(saldo >= 0){
-      document.write("Seu saldo é: " + saldo +"  Parabéns! Vamos investir " + investimento + " um pouco");
+      document.write("Seu saldo é: " + diversao +"  Parabéns! Vamos investir o valor de: " + investimento );
     }else{
       document.write("Seu saldo é: " + saldo +"  Você esta ficando com a conta negativa. Precisa fazer cortes e investir em educação para virar o jogo");
 
