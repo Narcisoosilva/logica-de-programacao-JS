@@ -167,6 +167,7 @@ let idade = parseInt(prompt("Digite sua idade."));
     1. Faça um algoritmo que leia 2 números inteiros para as variáveis A e B. Caso A seja maior que B e B seja par, efetue a troca dos valores de forma que a variável A passe a conter o valor da variável B e, a variável B passe a conter o valor da variável.
     */
     //debugger
+    /*
     var a = parseInt(prompt("Digite o 1º número."))
     var b = parseInt(prompt("Digite o 2º número."))
 
@@ -185,7 +186,22 @@ let idade = parseInt(prompt("Digite sua idade."));
 
     /*
     2. Faça um algoritmo que leia dois valores numéricos inteiros e distintos. Apresente a diferença do maior pelo menor na tela.
+    */
 
+    var a = parseInt(prompt("Digite o 1º número."))
+    var b = parseInt(prompt("Digite o 2º número."))
+
+    if(a > b){
+      var c = a-b;
+      document.write("o 1º Número é maior que 2º, com uma diferença de : " + c + "<br>")
+    }else{
+      var c = b-a;
+      document.write("o 2º Número é maior que 1º, com uma diferença de : " + c + "<br>")
+    }
+    
+
+    
+    /*
     3. Faça um algoritmo que leia dois valores numéricos e imprima o maior. Caso os números sejam iguais imprima a mensagem ‘Números iguais!’.
 
     4. Faça um algoritmo que calcule e imprima o desconto do salário de um funcionário, sabendo que:
