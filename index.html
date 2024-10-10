@@ -294,24 +294,33 @@ let idade = parseInt(prompt("Digite sua idade."));
     c. se​ media < 20, mostrar "Cara, realmente é isso que você deseja? "
     */
     var nome_cli1 = prompt("Digite o nome do cliente 1.")
-    var valor_cli1 = parseFloat(prompt("Digite o valor."))
+    var sexo =prompt("Digite o sexo do cliente 1\nM para masculino\nF para feminino")
+    var s_sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F")
+    var sexo_mostra = (s_sexo == "M" ? "do" : "da")
+    var valor_cli1 = parseFloat(prompt("Digite o valor "+ sexo_mostra +" "+nome_cli1))
 
     var nome_cli2 = prompt("Digite o nome do cliente 2.")
-    var valor_cli2 = parseFloat(prompt("Digite o valor."))
-
-    var nome_cli3 = prompt("Digite o nome do cliente 3.")
-    var valor_cli3 = parseFloat(prompt("Digite o valor."))
+    var sexo =prompt("Digite o sexo do cliente 2\nM para masculino\nF para feminino")
+    var s_sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F")
+    var sexo_mostra = (s_sexo == "M" ? "do" : "da")
+    var valor_cli2 = parseFloat(prompt("Digite o valor "+ sexo_mostra +" "+nome_cli2))
     
+    var nome_cli3 = prompt("Digite o nome do cliente 3.")
+    var sexo =prompt("Digite o sexo do cliente 3\nM para masculino\nF para feminino")
+    var s_sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F")
+    var sexo_mostra = (s_sexo == "M" ? "do" : "da")
+    var valor_cli3 = parseFloat(prompt("Digite o valor "+ sexo_mostra +" "+nome_cli3))
+
     media = (valor_cli1+valor_cli2+valor_cli3)/3;
 
     if (media >= 100) {
-      document.write("Parabéns, sua média é maior que 100.");
+      document.write("Parabéns, sua média é maior que 100.<br> " + media );
     } else if (media >= 50  &&  media < 100) {
-      document.write("Muito bem, você esta na media, vamos melhorar.");
+      document.write("Muito bem, você esta na media, vamos melhorar." + media);
     }else if(media >= 20  &&  media < 50){
-      document.write("É, você precisa melhorar estamos aqui para te ajudar.");
+      document.write("É, você precisa melhorar estamos aqui para te ajudar." + media);
     }else if (media < 20) {
-      document.write("Cara, realmente é isso que você deseja? ");
+      document.write("Cara, realmente é isso que você deseja? " + media);
     }
   </script>
 </body>
