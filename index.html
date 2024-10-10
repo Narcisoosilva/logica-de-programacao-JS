@@ -228,6 +228,7 @@ let idade = parseInt(prompt("Digite sua idade."));
     c. se salário > R$ 2000, 00, desconto de 15% sobre o salário
 
     */
+    /*
     var salario = parseInt(prompt("Digite o seu salário."))
     
     if(salario < 1000){
@@ -247,17 +248,44 @@ let idade = parseInt(prompt("Digite sua idade."));
       var saldo = salario - (salario * desc)/100;
       document.write(" O salário bruto é de: " + salario + " o desconto é de: " + desc + "%, O salário líquido é de " + saldo);
     }
-   
+    */
    
     /*
 
     5. Faça um algoritmo que efetue a leitura de três valores numéricos reais distintos e apresente os valores lidos em ordem crescente.
-
-
     */
-     
 
+    var a = parseInt(prompt("Digite o 1º número."))
+    var b = parseInt(prompt("Digite o 2º número."))
+    var c = parseInt(prompt("Digite o 3º número."))
+    
+    document.write("Apresentando os valores lidos em ordem crescente.<br>");
 
+    // Verifica se a é o menor
+    if (a < b && a < c) {
+        if (b < c) {
+            document.write(a + "<br>" + b + "<br>" + c + "<br>");
+        } else {
+            document.write(a + "<br>" + c + "<br>" + b + "<br>");
+        }
+    }
+    // Verifica se b é o menor
+    else if (b < a && b < c) {
+        if (a < c) {
+            document.write(b + "<br>" + a + "<br>" + c + "<br>");
+        } else {
+            document.write(b + "<br>" + c + "<br>" + a + "<br>");
+        }
+    }
+    // Verifica se c é o menor
+    else {
+        if (a < b) {
+            document.write(c + "<br>" + a + "<br>" + b + "<br>");
+        } else {
+            document.write(c + "<br>" + b + "<br>" + a + "<br>");
+        }
+    }
+ 
   </script>
 </body>
 </html>
