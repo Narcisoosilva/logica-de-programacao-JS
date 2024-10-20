@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>refaoração</title>
+    <title>refatoração</title>
 </head>
 <body>
     <script>
@@ -17,6 +17,7 @@
         c. se​ media >= 20  &&  media < 50​, mostrar "É, você precisa melhorar estamos aqui para te ajudar." 
 
         c. se​ media < 20, mostrar "Cara, realmente é isso que você deseja? "
+        a quantidade de pessoas X
         */
         var clientes = [];
         var cadastrar = true;
@@ -29,6 +30,7 @@
             var sexo_mostra = (s_sexo == "M" ? "do" : "da")
             var valor = parseFloat(prompt("Digite o valor "+ sexo_mostra +" "+nome))
             cliente.push(nome, s_sexo, valor);
+
             clientes.push(cliente);
             
             var sair = prompt("Quer cadastrar mais um cliente.")
@@ -41,29 +43,35 @@
         } while (cadastrar);
         
         var valores = 0;
-        //debugger;
+        
         for (let index = 0; index < clientes.length; index++) {
             valores += clientes[index][2];     
             console.log(clientes[index][2])       
         }
-        
+
+        /*
         console.log(clientes)
         document.write(clientes);
+        */
 
         var media = (valores)/clientes.length;
 
-        console.log(media)
-        document.write("<br>" + media);
+        console.log(media.toFixed(2))
+        document.write("<br>" + media.toFixed(2) + "<br>");
+
+        document.write("A quantidade de pessoas na pesquisa foi: " + clientes.length + "<br><br>A media das pessoas foi:" + media.toFixed(2) + "<br><br>")
 
         if (media >= 100) {
-        document.write("Parabéns, sua média é maior que 100.<br> " + media );
+        document.write("Parabéns, sua média é maior que 100.<br> " + media.toFixed(2) + "<br>" );
         } else if (media >= 50  &&  media < 100) {
-        document.write("Muito bem, você esta na media, vamos melhorar." + media);
+        document.write("Muito bem, você esta na media, vamos melhorar." + media.toFixed(2) + "<br>");
         }else if(media >= 20  &&  media < 50){
-        document.write("É, você precisa melhorar estamos aqui para te ajudar." + media);
+        document.write("É, você precisa melhorar estamos aqui para te ajudar." + media.toFixed(2) + "<br>");
         }else if (media < 20) {
-        document.write("Cara, realmente é isso que você deseja? " + media);
+        document.write("Cara, realmente é isso que você deseja? " + media.toFixed(2) + "<br>");
         }
+
+        
     </script>
 </body>
 </html>
