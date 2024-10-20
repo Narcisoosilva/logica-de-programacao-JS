@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refaoração</title>
+</head>
+<body>
+    <script>
+        /*
+        Faça um programa que solicite o nome de 3 clientes e 3 valores para cada cliente. Após capturar os valores,  faça a media do valor total. 
+
+        a. se​ media >= 100, mostrar "Parabéns, sua média é maior que 100".
+
+        b. se​ media >= 50  &&  media < 100, mostrar "Muito bem, você esta na media, vamos melhorar".
+
+        c. se​ media >= 20  &&  media < 50​, mostrar "É, você precisa melhorar estamos aqui para te ajudar." 
+
+        c. se​ media < 20, mostrar "Cara, realmente é isso que você deseja? "
+        */
+        var clientes = [];
+        var cadastrar = true;
+    
+        do {
+            var cliente = [];
+            var nome = prompt("Digite o nome do cliente.")
+            var sexo =prompt("Digite o sexo do cliente 1\nM para masculino\nF para feminino")
+            var s_sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F")
+            var sexo_mostra = (s_sexo == "M" ? "do" : "da")
+            var valor = parseFloat(prompt("Digite o valor "+ sexo_mostra +" "+nome))
+            cliente.push(nome, s_sexo, valor);
+            clientes.push(cliente);
+            
+            var sair = prompt("Quer cadastrar mais um cliente.")
+            s_sair = (sair.trim().toUpperCase() == "S" ? "S" : "N")
+            
+            if (s_sair == "N") {
+                cadastrar = false;
+            }
+            
+        } while (cadastrar);
+        
+        var valores = 0;
+        //debugger;
+        for (let index = 0; index < clientes.length; index++) {
+            valores += clientes[index][2];     
+            console.log(clientes[index][2])       
+        }
+        
+        console.log(clientes)
+        document.write(clientes);
+
+        var media = (valores)/clientes.length;
+
+        console.log(media)
+        document.write("<br>" + media);
+
+        if (media >= 100) {
+        document.write("Parabéns, sua média é maior que 100.<br> " + media );
+        } else if (media >= 50  &&  media < 100) {
+        document.write("Muito bem, você esta na media, vamos melhorar." + media);
+        }else if(media >= 20  &&  media < 50){
+        document.write("É, você precisa melhorar estamos aqui para te ajudar." + media);
+        }else if (media < 20) {
+        document.write("Cara, realmente é isso que você deseja? " + media);
+        }
+    </script>
+</body>
+</html>
