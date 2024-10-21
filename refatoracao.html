@@ -49,11 +49,6 @@
             console.log(clientes[index][2])       
         }
 
-        /*
-        console.log(clientes)
-        document.write(clientes);
-        */
-
         var media = (valores)/clientes.length;
 
         console.log(media.toFixed(2))
@@ -62,13 +57,13 @@
         document.write("A quantidade de pessoas na pesquisa foi: " + clientes.length + "<br><br>A media das pessoas foi:" + media.toFixed(2) + "<br><br>")
 
         if (media >= 100) {
-        document.write("Parabéns, sua média é maior que 100.<br> " + media.toFixed(2) + "<br>" );
+            document.write("Parabéns, sua média é maior que 100.<br> " + media.toFixed(2) + "<br>" );
         } else if (media >= 50  &&  media < 100) {
-        document.write("Muito bem, você esta na media, vamos melhorar." + media.toFixed(2) + "<br>");
+            document.write("Muito bem, você esta na media, vamos melhorar." + media.toFixed(2) + "<br>");
         }else if(media >= 20  &&  media < 50){
-        document.write("É, você precisa melhorar estamos aqui para te ajudar." + media.toFixed(2) + "<br>");
+            document.write("É, você precisa melhorar estamos aqui para te ajudar." + media.toFixed(2) + "<br>");
         }else if (media < 20) {
-        document.write("Cara, realmente é isso que você deseja? " + media.toFixed(2) + "<br>");
+            document.write("Cara, realmente é isso que você deseja? " + media.toFixed(2) + "<br>");
         }
 
         

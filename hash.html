@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hash</title>
+</head>
+<body>
+    <script>
+        
+        var clientes = [];
+        var cadastrar = true;
+    
+        do {
+            
+            var nota = [];
+
+            var nome = prompt("Digite o nome do cliente.")
+            var sexo =prompt("Digite o sexo do cliente 1\nM para masculino\nF para feminino")
+            var s_sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F")
+            var sexo_mostra = (s_sexo == "M" ? "do" : "da")
+            var nota_1 = parseFloat(prompt("Digite a 1º nota "+ sexo_mostra +" "+nome))
+            var nota_2 = parseFloat(prompt("Digite a 2 º nota "+ sexo_mostra +" "+nome))
+            
+            nota.push(nota_1);
+            nota.push(nota_2);
+
+            media_aluno = (nota_1 +nota_2)/2;
+            
+            cliente = {};
+            cliente.nome = nome,
+            cliente.sexo = s_sexo,
+            cliente.notas =  nota,
+            cliente.media =  media_aluno
+                
+            //colocando no array
+            clientes.push(cliente);
+                        
+            var sair = prompt("Quer cadastrar mais um cliente.")
+            s_sair = (sair.trim().toUpperCase() == "S" ? "S" : "N")
+            
+            if (s_sair == "N") {
+                cadastrar = false;
+            }
+            
+        } while (cadastrar);
+         
+        console.log(clientes);
+
+        //fazer as medias totais:
+
+        notas_geral = 0;
+        QTD_notas = 0;
+        
+        clientes.forEach(cliente => {
+            // Iterar sobre as notas de cada cliente
+            cliente.notas.forEach(nota => {
+                notas_geral += nota;
+                QTD_notas += 1;
+            });
+        });
+
+        var media_geral = (notas_geral /QTD_notas).toFixed((2));
+
+        document.write("<hr>");
+        console.log(media_geral)
+        document.write("<br>" + media_geral + "<br>");
+
+        document.write("A quantidade de pessoas na pesquisa foi: " + clientes.length + "<br><br>A media das pessoas foi:" + media_geral + "<br><br>")
+
+        document.write("<hr>");
+
+        if (media_geral >= 100) {
+            document.write("Parabéns, sua média é maior que 100.<br> " + media_geral + "<br>" );
+        } else if (media_geral >= 50  &&  media_geral < 100) {
+            document.write("Muito bem, você esta na media, vamos melhorar." + media_geral + "<br>");
+        }else if(media_geral >= 20  &&  media_geral < 50){
+            document.write("É, você precisa melhorar estamos aqui para te ajudar." + media_geral + "<br>");
+        }else if (media_geral < 20) {
+            document.write("Cara, realmente é isso que você deseja? " + media_geral + "<br>");
+        }
+        
+    </script>
+</body>
+</html>
