@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio de funções</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        /*
+        faça um programa que pergunte uma opção ao usuario.
+        opção 1 mostrar calculo da tabuada.
+        opção 2 mostrar media dos alunos.
+        opção 3 parar o programa.
+
+        objetivo do exercicio é ter um loop onde irar ficar pergundando para  o usuario ate ele digitar opção 3 e sair do programa.
+        */
+        opcao = 0
+        /*
+        function tabuada() {
+            let num = parseInt(leia("Digite um número da tabuada."));
+            for (let index = 1; index <= 10; index++) {
+                document.write(num + " X " + index + " = " + (index * num) + "</br>");  
+            } 
+            document.write("<hr>");
+            
+        }
+        function media() {
+            alert("Voce irar digitar 4 notas");
+            let p1 = parseFloat(prompt("Digite a nota 1."));
+            let p2 = parseFloat(prompt("Digite a nota 2."));
+            let p3 = parseFloat(prompt("Digite a nota 3."));
+            let p4 = parseFloat(prompt("Digite a nota 4."));
+
+            media =(p1+p2+p3+p4)/4;
+
+            document.write("A media dos alunos do 3º serie é?: "+ media);
+            
+        }*/
+
+        function tabuada() {
+            let num = parseInt(leia("Digite um número da tabuada."));
+            let resultado = "<h3>Tabuada do " + num + ":</h3>";
+            for (let index = 1; index <= 10; index++) {
+                resultado += num + " X " + index + " = " + (index * num) + "<br>";
+            }
+            resultado += "<hr>";
+            document.getElementById("output").innerHTML += resultado;
+        }
+
+        function media() {
+            alert("Você vai digitar 4 notas.");
+            let p1 = parseFloat(prompt("Digite a nota 1."));
+            let p2 = parseFloat(prompt("Digite a nota 2."));
+            let p3 = parseFloat(prompt("Digite a nota 3."));
+            let p4 = parseFloat(prompt("Digite a nota 4."));
+
+            let media = (p1 + p2 + p3 + p4) / 4;
+
+            document.getElementById("output").innerHTML += "<h3>Média dos alunos:</h3> A média é " + media + "<hr>";
+        }
+
+
+
+        function leia(mgs) {
+            return prompt(mgs);
+        }
+        function mostre(mgs) {
+            //document.write(mgs);
+            alert(mgs);
+        }
+        function sair() {
+            opcao = 3;
+            mostre("Obrigado por utilizar o programa.");
+        }
+
+        while (opcao != 3) {
+            opcao = parseInt(prompt("digite uma das opções abaixo:\n1 - Tabuada.\n2 - Media\n3 - Sair"));
+
+            switch (opcao) {
+                case 1:
+                    tabuada();
+                    break;
+                case 2:
+                    media();
+                    break;
+                case 3:
+                    sair();
+                    break;
+                            
+                default:
+                    mostre("Digite uma opção válida.");
+                    break;
+            }            
+        }
+    </script>
+    
+</body>
+</html>
