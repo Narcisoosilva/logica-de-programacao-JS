@@ -11,26 +11,48 @@
         opcao = 0
 
         function tabuada() {
-            let num = parseInt(leia("Digite um número da tabuada."));
-            let resultado = "<h3>Tabuada do " + num + ":</h3>";
-            for (let index = 1; index <= 10; index++) {
-                resultado += num + " X " + index + " = " + (index * num) + "<br>";
+
+            multiplicador = parseInt(leia("Digite um número da tabuada."));
+            resultado = "<h3>Tabuada do " + multiplicador + ":</h3>";
+            inicio_tab = 1;
+            fim_tab = 10;
+
+            function calculo(inicio_tab, fim_tab, multiplicador){
+                if (inicio_tab > fim_tab) {
+                    return;
+                } 
+                document.write(inicio_tab + " X " + multiplicador + " = " + (inicio_tab * multiplicador) + "<br>")    
+            
+                tabuada(inicio_tab + 1, fim_tab, multiplicador)
+
             }
             resultado += "<hr>";
             document.getElementById("output").innerHTML += resultado;
         }
-
+        
+        
         function media() {
-            alert("Você vai digitar 4 notas.");
-            let p1 = parseFloat(prompt("Digite a nota 1."));
-            let p2 = parseFloat(prompt("Digite a nota 2."));
-            let p3 = parseFloat(prompt("Digite a nota 3."));
-            let p4 = parseFloat(prompt("Digite a nota 4."));
+                        
+            nome = prompt("Digite a Nome do(a) Aluno(a).");
+            quantidade = parseInt(prompt("Digite quantas notas para o "+ nome+". Voce vai digitar?."));
+            notas=[];
+            calcula(quantidade, 1);
 
-            let media = (p1 + p2 + p3 + p4) / 4;
+            function calcula(quantidade,i ){
+                notas.push(Number(prompt("Digite a nota "+ i +" do(a) "+ nome+" :")))
+                if (i >= quantidade) {
+                    return;
+                }
+                calcula(quantidade, i+1 )
+            }
 
-            document.getElementById("output").innerHTML += "<h3>Média dos alunos:</h3> A média é " + media + "<hr>";
+            soma = notas.reduce((a,b)=> a +b, 0);
+            media = soma / notas.length;
+
+            document.write("<h3>Média dos alunos:</h3> A média é " + media + "<hr>");
         }
+
+
 
         function leia(mgs) {
             return prompt(mgs);
